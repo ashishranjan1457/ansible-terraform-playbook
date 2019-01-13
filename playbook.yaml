@@ -39,3 +39,7 @@
         project_path: "{{ playbook_dir }}"
         plan_file: "{{ project_dir }}/plan.tfplan"
         state: "{{ input_state }}"
+      register: terraform_output
+
+    - debug:
+        var: terraform_output.stdout_lines
