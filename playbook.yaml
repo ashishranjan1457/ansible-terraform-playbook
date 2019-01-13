@@ -11,7 +11,7 @@
     - name: Init nodejs-mysql app
       command: "terraform init {{ playbook_dir }}"
 
-    - name: Nodejs-mysql app
+    - name: Nodejs-mysql app "{{ input_state }}"
       terraform:
         variables:
           aws_access_key: "{{ aws_access_key }}"
