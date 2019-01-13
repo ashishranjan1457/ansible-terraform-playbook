@@ -1,5 +1,5 @@
 aws_region: "us-east-1"
-private_key_path: "/home/ubuntu/demo_key_pair.pem"
+private_key_path: "/var/lib/jenkins/secrets/demo_key_pair.pem"
 key_name: "demo_key_pair"
 mysql_port: "3306"
 rds_instance_type: "db.t2.micro"
