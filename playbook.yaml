@@ -37,7 +37,7 @@
           ec2_instance_type: "{{ ec2_instance_type }}"
           ec2_user: "{{ ec2_user }}"
         project_path: "{{ playbook_dir }}"
-        plan_file: "{{ project_dir }}/plan.tfplan"
+        plan_file: "{{ playbook_dir }}/plan.tfplan"
         state: "{{ input_state }}"
       register: terraform_output
 
