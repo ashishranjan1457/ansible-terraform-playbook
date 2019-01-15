@@ -95,10 +95,10 @@ resource "aws_instance" "nodejs" {
       "sudo apt install -y nodejs npm",
       "git clone https://github.com/ashishranjan1457/rest-crud.git",
       "cd rest-crud",
-			"export DB_ENDPOINT=${aws_db_instance.app_database.address}",
-			"export DB_USERNAME=${var.db_username}",
-			"export DB_PASSWORD=${var.db_username}",
-			"envsubst < server.js.template > server.js",
+      "export DB_ENDPOINT=${aws_db_instance.app_database.address}",
+      "export DB_USERNAME=${var.db_username}",
+      "export DB_PASSWORD=${var.db_username}",
+      "envsubst < server.js.template > server.js",
       "npm install",
       "nohup nodejs server.js > /tmp/test.txt 2>&1 </dev/null &"
     ]
