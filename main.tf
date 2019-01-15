@@ -13,7 +13,6 @@ data "aws_availability_zones" "available" {}
 # Resources
 
 resource "aws_security_group" "allow_all" {
-  name        = "allow_all"
   description = "Allow all inbound traffic"
 
   ingress {
@@ -37,7 +36,7 @@ resource "aws_security_group" "allow_all" {
 
 
 resource "aws_security_group" "mysql_secgroup" {
-	vpc_id = "${data.aws_vpc.default.id}"
+	description = "Allow all inbound traffic"
 
 	ingress {
 		from_port = "${var.mysql_port}"
